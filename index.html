@@ -1,15 +1,152 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/navbar.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PedidoJá | Cardápio Local</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+  </head>
+  <body>
+    <div id="custom-cursor"></div>
     <!-- Navbar -->
-    <object type="text/html" data="components/navbar.html"></object>
-</body>
+    <nav>
+      <div class="navbar-container">
+        <div class="navbar-left">
+          <img src="assets/images/logo.png" alt="PedidoJá Logo" class="logo" />
+        </div>
+        <div class="navbar-middle">
+          <a
+            href="#home"
+            class="nav-link"
+            data-words='["Como funciona", "Como funciona"]'
+            ><span class="word">Como funciona</span></a
+          >
+          <a
+            href="#menu"
+            class="nav-link"
+            data-words='["Vantagens", "Vantagens"]'
+            ><span class="word">Vantagens</span></a
+          >
+          <a href="#about" class="nav-link" data-words='["Contato", "Contato"]'
+            ><span class="word">Contato</span></a
+          >
+        </div>
+        <div class="navbar-right">
+          <button
+            class="shimmer-button"
+            style="
+              --spread: 90deg;
+              --shimmer-color: #000000;
+              --radius: 100px;
+              --speed: 3s;
+              --cut: 0.05em;
+              --bg: #e6a41f;
+            "
+          >
+            <div class="spark-container">
+              <div class="spark">
+                <div class="spark-before"></div>
+              </div>
+            </div>
+            Converse Conosco
+            <div class="highlight"></div>
+            <div class="backdrop"></div>
+          </button>
+          <button class="hamburger" aria-label="Menu">&#9776;</button>
+        </div>
+      </div>
+    </nav>
+    <div id="flickering-grid" class="flickering-grid">
+      <canvas></canvas>
+    </div>
+    <div class="mobile-menu">
+      <a
+        href="#home"
+        class="nav-link"
+        data-words='["Como funciona", "Como funciona"]'
+        ><span class="word">Como funciona</span></a
+      >
+      <a href="#menu" class="nav-link" data-words='["Vantagens", "Vantagens"]'
+        ><span class="word">Vantagens</span></a
+      >
+      <a href="#about" class="nav-link" data-words='["Contato", "Contato"]'
+        ><span class="word">Contato</span></a
+      >
+      <button
+        class="shimmer-button"
+        style="
+          --spread: 90deg;
+          --shimmer-color: #000000;
+          --radius: 100px;
+          --speed: 3s;
+          --cut: 0.05em;
+          --bg: #e6a41f;
+        "
+      >
+        <div class="spark-container">
+          <div class="spark">
+            <div class="spark-before"></div>
+          </div>
+        </div>
+        Converse Conosco
+        <div class="highlight"></div>
+        <div class="backdrop"></div>
+      </button>
+    </div>
+    <main>
+      <section class="hero" data-aos="fade-up">
+        <div class="hero-content">
+          <div class="hero-left">
+            <h1 data-aos="zoom-in" data-aos-duration="1000">
+              <div class="sparkles-text">
+                <span class="sparkles-content">
+                  <span class="pedido">Pedido</span
+                  ><span
+                    class="ja line-shadow-text"
+                    data-text="Já"
+                    style="--shadow-color: black"
+                    >Já</span
+                  >
+                </span>
+              </div>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+              Peça fácil, rápido e sem taxas!
+            </p>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+              O sistema completo de pedidos via QR Code que funciona 100% na sua
+              rede local. Zero taxas, máxima praticidade!
+            </p>
+            <div class="hero-features" data-aos="fade-up" data-aos-delay="600">
+              <span>Sem Internet</span>
+              <span>Cardápio Digital</span>
+              <span>Tempo Real</span>
+            </div>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
+              <button class="btn-primary">Ver Demonstração</button>
+              <button class="btn-secondary">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="hero-right" data-aos="fade-left" data-aos-delay="600">
+            <img
+              src="assets/images/hero-image.png"
+              alt="PedidoJá Hero Image"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="js/navbar.js"></script>
+  </body>
 </html>
